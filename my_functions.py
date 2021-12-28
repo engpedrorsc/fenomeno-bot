@@ -37,6 +37,7 @@ def build_message(btc_amount, btc_current_price, inv_return, days_interval, annu
     btc_amount = eng_to_br(f'{btc_amount:_.0f}')
     fiat_amount = eng_to_br(f'{fiat_amount:_.2f}')
     inv_return = eng_to_br(f'{inv_return:_.1%}')
+    days_interval = eng_to_br(f'{days_interval:_}')
     if abs(annual_inv_return) < 1:
         annual_inv_return = eng_to_br(f'{annual_inv_return:_.1%}')
     else:
