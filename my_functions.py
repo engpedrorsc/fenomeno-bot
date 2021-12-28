@@ -27,8 +27,7 @@ def truncate(number, decimals=0):
 
 
 def eng_to_br(text, thousand='_', decimal='.'):
-    text = text.replace(decimal, ',').replace(thousand, '.')
-    return text
+    return text.replace(decimal, ',').replace(thousand, '.')
 
 
 def build_message(btc_amount, btc_current_price, inv_return, days_interval, annual_inv_return):
@@ -43,7 +42,7 @@ def build_message(btc_amount, btc_current_price, inv_return, days_interval, annu
     else:
         annual_inv_return = eng_to_br(f'{annual_inv_return:_.0%}')
 
-    text = f'Se o Fenômeno tivesse comprado bitcoin com o dinheiro da compra do Cruzeiro, hoje ele teria quase ₿{btc_amount} que valem R${fiat_amount}.\n\
+    text = f'Se o Fenômeno tivesse comprado bitcoin com o dinheiro da compra do Cruzeiro, hoje ele teria aproximadamente ₿{btc_amount} que valem R${fiat_amount}.\n\
 Isso representa um retorno de {inv_return} em {days_interval} dias, o que equivale a {annual_inv_return} ao ano.'
 
     return text
