@@ -18,5 +18,5 @@ current_good_inv_annual_return = pow(
 message = build_message(good_inv_amount, current_btc_price,
                         current_good_inv_return, good_inv_interval, current_good_inv_annual_return)
 
-print(message)
-# send_message(consumer_key, consumer_secret, key, secret, message)
+# print(message)
+send_message(consumer_key, consumer_secret, key, secret, message)
